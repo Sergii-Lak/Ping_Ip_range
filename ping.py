@@ -20,7 +20,7 @@ class RangeIP(Thread):
         self.ip = ip
 
     def run(self):
-        ping_ip = subprocess.call(["ping", "-n", "1", "-w", "1", self.ip], stdout=subprocess.DEVNULL,
+        ping_ip = subprocess.call(["ping", "-n", "1", "-w", "1000", self.ip], stdout=subprocess.DEVNULL,
                                   shell=True)
         # You can also add two parameters: "- c", " 1" like this:
         # ping_ip = subprocess.call(["ping", "-n", "1", "-c", "1", "-w", "1", self.ip], stdout=subprocess.DEVNULL, shell=True)
